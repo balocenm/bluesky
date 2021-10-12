@@ -1,0 +1,441 @@
+/* "*" es el selector universal, para seleccionar todos los elementos de la página*/
+*{
+  margin: 0;
+  padding: 0; /*espacio entre el contenido del elemento y su borde*/
+  user-select: none;  /*si el usuario puede seleccionar el texto*/
+  box-sizing: border-box; /*Para calcular las dimensiones de los elementos*/
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: white;
+}
+
+nav{
+  background: #242424;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+  z-index:100; /*Sobreponer un elemento por encima de otro*/
+}
+nav ul li{
+  float: left;
+  display: inline-block; /*Comportamiento es como un bloque; con los elementos que la rodean es una caja en línea.*/
+  background:#242424;
+  margin: 0 20px;
+  line-height: 80px;
+  text-align: center;	
+}
+nav ul li a{
+  color: white;
+  line-height: 50px;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 15px 20px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color:white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+  display: inline-block;
+}
+
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+nav .show,.icon,input #btn-1{
+  display: none;
+}
+nav .show,.icon,input #btn-2{
+  display: none;
+}
+nav .show,.icon,input #btn-3{
+  display: none;
+}
+nav .show,.icon,input #btn-4{
+  display: none;
+}
+checkbox{
+	display: none;
+}
+/*-----------contenidos----------*/
+#contenidos{
+	background: #F2F2F2;
+	padding: 0px 0px 20px 0px;
+}
+
+#contenidos-paginas{
+	background: #FFF;
+	padding: 0px 0px 20px 0px;
+}
+#contenidos #centro3{
+	width: 800px;
+	margin: auto; border: 0px solid; height: auto; overflow: hidden;
+	text-align: center;
+
+}
+#contenidos #centro3 #izquierda{
+	width: 390px;
+	height: auto; overflow: hidden; border: 0px solid; float: left;
+	text-align: center;
+}
+
+
+
+
+
+#contenidos #centro3 #izquierda h3{
+	text-align: left; color: #0B615E;
+	font-size: 22px;
+}
+
+
+#contenidos #centro3 #izquierda .descripcion{
+	color: #6E6E6E; text-align: left;
+}
+
+#contenidos #centro3 #izquierda #imagenes{
+	border: 0px solid; height: auto;overflow: hidden;
+	width: 100%;
+}
+#contenidos #centro3 #izquierda #imagenes .img-services{
+	width: 120px; height: 100px;
+	border: 1px solid #ccc; padding: 2px; display: inline-block;
+}
+
+
+/*-------contenidos derecha-------*/
+
+#contenidos #centro3 #derecha{
+	width: 390px;
+	height: auto; overflow: hidden; border: 0px solid; float: right;
+	text-align: center;
+}
+
+#contenidos #centro3 #derecha h3{
+	text-align: left; font-size: 22px;
+	color: #0B615E;
+}
+
+#contenidos #centro3 #derecha article{
+	width: 100%;
+	height: auto; overflow: hidden;
+	margin-top: -25px;
+}
+
+#contenidos #centro3 #derecha article h4{
+	text-align: left; font-size: 15px;
+}
+
+#contenidos #centro3 #derecha article p{
+	color: #6E6E6E; text-align: left;
+	margin-top: -15px;
+}
+
+.leer-mas{
+	padding: 4px 10px; 
+	background: #086A87;
+	color: #fff; text-decoration: none;
+	border-radius: 5px; float: left;
+	margin-top: -1px; border: 0;
+}
+
+.leer-mas:hover{
+	background: #0B4C5F;
+}
+
+/*---------pie de pagina ----------------*/
+
+#pie{
+	border: 0px solid #000;
+	width: 100%;
+	height: 90px;
+	background: #111111;
+	margin-top: 0px;
+}
+
+#pie #centro-pie{
+	width: 800px;
+	height: auto; overflow: hidden;
+	margin: auto;
+}
+
+#pie #centro-pie .contacto{
+	color: #F2F2F2;
+	text-decoration: none;
+	font-family: 'calibri';
+}
+
+#pie #centro-pie .contacto:hover{
+	text-decoration: underline;
+}
+
+/*--------pagina de nosotros-----------------*/
+
+#centro3{
+	width: 800px;
+	margin: auto; border: 0px solid; height: auto; overflow: hidden;
+	text-align: center;
+}
+
+.encabezados{
+	font-family: 'Arial black';
+	font-size: 30px;
+}
+
+.t1{
+	color: #424242;
+}
+
+.t2{
+		color: #0489B1;
+}
+
+.descripcion-pagina{
+	color: #848484;
+}
+
+.texto-nosotros{
+	text-align: left;
+}
+
+hr{
+	border-top: 1px;
+}
+
+.img-nosotros{
+	float: left;
+	margin-right: 7px;
+}
+
+#filosofia{
+	height: auto; overflow: hidden;
+}
+
+#mision, #vision, #valores{
+	width: 245px;
+	height: auto; overflow: hidden;
+	border: 1px solid #ccc;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#vision{
+	margin-right: 7px;
+	margin-left: 7px;
+}
+
+
+/*--------pagina de servivios-------*/
+.servicios{
+	font-family: 'Arial black';
+	font-size: 20px;
+}
+
+.uno{
+	color: #424242;
+}
+
+.dos{
+	color: #0489B1
+}
+
+#disenio{
+	width: 250px;
+	height: 300px;
+	border: 0px solid #ccc;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.img-servicios{
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	padding: 2px;
+}
+
+.web{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+
+/*--------pagina clientes-------------*/
+
+#clientes{
+	width: 230px;
+	height: auto;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	display: inline-block;
+}
+
+.cliente2{
+	margin:0px 10px 0px 10px;
+}
+
+.img-clientes{
+	width: 200px;
+	height: 200px;
+	
+	border: 0px solid #ccc;
+	padding: 2px;
+}
+
+.descripcion-clientes{
+	color: #6E6E6E;
+	text-decoration: none;
+	font-family: 'calibri';
+}
+
+
+/*-------pagina de contacto------*/
+
+#izquierda{
+	width: 300px;
+	height: auto; overflow: hidden;
+	border: 0px solid;
+	float: left;
+}
+
+.texto-contacto{
+	text-align: left;
+}
+
+.email-contacto{
+	color: #848484;
+	text-decoration: none;
+}
+
+.email-contacto:hover{
+	text-decoration: underline;
+}
+
+#derecha{
+	width: 490px;
+	border: 0px solid;
+	height: auto; overflow: hidden;
+	float: right;
+}
+
+input[type="text"], input[type="email"]{
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+
+
+
+textarea{
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.nombre-mensaje{
+	width: 95%;
+}
+
+.email-asunto{
+	width: 95%;
+}
+
+
+input, textarea{
+	width: -webkit-fill-available;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgb(0 0 0 / 3%) inset;
+    margin-bottom: 30px;
+}
+button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #242424;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 -1px 0 rgb(255 255 255 / 10%) inset;
+    margin-bottom: 10px;
+	cursor: pointer;
+}
+button.active,button:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+#mapa{
+	width: 75%;
+	height: auto; overflow: hidden;
+	padding: 20px;
+}

@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  padding: 0; /*espacio entre el contenido del elemento y su borde*/
+  user-select: none;  /*si el usuario puede seleccionar el texto*/
+  box-sizing: border-box; /*Para calcular las dimensiones de los elementos*/
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: black;
+}
